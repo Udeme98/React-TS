@@ -1,6 +1,6 @@
 type GreetingProp = {
   name: string;
-  age: number;
+  age?: number; // Optional props
   isLoggedIn: boolean;
 };
 
