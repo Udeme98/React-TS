@@ -1,6 +1,7 @@
 import Greeting from "./components/Greeting";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
+import Status from "./components/Status";
 
 const App = () => {
   const personName = {
@@ -28,6 +29,7 @@ const App = () => {
       <Greeting name="Udeme" age={9} isLoggedIn={true} />
       <Person person={personName} />
       <PersonList nameList={nameList} />
+      <Status status="loading" />
     </div>
   );
 };
