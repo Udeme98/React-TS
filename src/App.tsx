@@ -6,6 +6,10 @@ import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import Status from "./components/Status";
+import Box from "./components/context/Box";
+import ThemeContext from "./components/context/ThemeContext";
+import User from "./components/context/User";
+import UserContextProvider from "./components/context/UserContextProvider";
 
 const App = () => {
   const personName = {
@@ -41,7 +45,15 @@ const App = () => {
 
       <Button handleClick={(event, id) => console.log("Clicked", event, id)} />
       <br />
-      <Input value="y" handleChange={(event) => console.log(event)} />
+      <Input value="" handleChange={(event) => console.log(event)} />
+
+      <ThemeContext>
+        <Box />
+      </ThemeContext>
+
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 };
