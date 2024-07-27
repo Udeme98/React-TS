@@ -12,6 +12,7 @@ import Box from "./components/context/Box";
 import ThemeContext from "./components/context/ThemeContext";
 import User from "./components/context/User";
 import UserContextProvider from "./components/context/UserContextProvider";
+import List from "./components/generics/List";
 
 const App = () => {
   const personName = {
@@ -58,6 +59,18 @@ const App = () => {
       </UserContextProvider>
 
       <Private isLoggedIn={true} component={Profile} />
+
+      <List
+        items={["Batman", "Superwoman", "Wonderman"]}
+        onClick={(item) => console.log(item)}
+      />
+      {/* <List
+        items={[
+          { firstname: "Bruce", lastname: "Wayne" },
+          { first: "Tom", last: "Cruise" },
+        ]}
+        onClick={(item) => console.log(item)}
+      /> */}
     </div>
   );
 };
