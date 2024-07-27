@@ -6,6 +6,8 @@ import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import Status from "./components/Status";
+import Private from "./components/auth/Private";
+import Profile from "./components/auth/Profile";
 import Box from "./components/context/Box";
 import ThemeContext from "./components/context/ThemeContext";
 import User from "./components/context/User";
@@ -54,6 +56,8 @@ const App = () => {
       <UserContextProvider>
         <User />
       </UserContextProvider>
+
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 };
